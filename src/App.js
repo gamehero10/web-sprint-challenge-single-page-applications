@@ -1,11 +1,23 @@
 import React from "react";
+import {Routes, Route, Link } from "react-router-dom";
+import PizzaApp from "./PizzaApp";
+
+
+
 
 const App = () => {
   return (
     <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
+      <nav className="navbar">
+        <Link to = "/" >Home</Link>
+        <Link to="/pizza" id = "order-pizza">Pizzas</Link>
+      </nav>
+      <h1>Bloomtech Eats</h1>
+
+      <Routes>
+      <Route path="/pizza" element={<PizzaApp/>}/> 
+      </Routes>
     </>
   );
 };
-export default App;
+export default App; 
